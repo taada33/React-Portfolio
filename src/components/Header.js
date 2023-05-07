@@ -1,13 +1,13 @@
 import React from "react";
 import Navigation from "./Navigation";
 
-function Header({handlePageChange}) {
+function Header({handlePageChange, currentPage}) {
     return (
         <header>
         <h1>
             Thomas Adamson
         </h1>
-        <Navigation handlePageChange={handlePageChange}/>
+        <Navigation currentPage={currentPage} handlePageChange={handlePageChange}/>
         </header>
     )
 }

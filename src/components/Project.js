@@ -16,7 +16,7 @@ function Project(project) {
                     <>
                     <h3 className="title">{name}</h3>
                     <a className="project-github" href={github}>Github</a>
-                    <a className="link" href={deploy}>Link</a>
+                    {deploy && (<a className="link" href={deploy}>Link</a>)}
                     </>
                 )}
         </div>

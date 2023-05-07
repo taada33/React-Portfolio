@@ -2,6 +2,7 @@
   text-align: center;
   display: block;
   overflow: auto;
+  height:100%;
 }
 
 h1, h2, h3, p{
@@ -59,6 +60,12 @@ footer{
   background-repeat: no-repeat;
 }
 
+.profileImg{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10rem;
+}
+
 .project-container{
   display: flex;
   justify-content: center;
@@ -66,6 +73,8 @@ footer{
 }
 
 .img-container {
+  color: white;
+  text-shadow: 1px 1px black;
   position: relative;
   display: inline-block;
   margin: 20px;
@@ -82,7 +91,7 @@ img {
   position: absolute;
   top: 10%;
   left: 24%;
-
+  pointer-events: none;
 }
 
 .img-container .link{
@@ -97,4 +106,26 @@ img {
   left: 24%;
 }
 
+form{
+  margin: auto;
+  width: 100%;
+}
 
+form label{
+  text-align: center;
+  color:white;
+}
+
+form input {
+  display: block;
+  margin: auto;
+  width: 20%;
+}
+
+form textarea{
+  display: block;
+  margin: auto; 
+  resize: none;
+  width: 20%;
+  overflow: hidden;
+}

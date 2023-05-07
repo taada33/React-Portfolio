@@ -26,11 +26,18 @@ function App() {
       return <Contact />;
     }
     if (currentPage === 'Portfolio') {
-      return <div className="project-container">
+      return (
+        <>
+        <h2>Portfolio</h2>
+        <div className="project-container">
         <Portfolio />
-        </div>;
+        </div>
+        </>
+      ) 
     }
-    return <Resume />;
+    if (currentPage === 'Resume'){
+      return <Resume />;
+    }
   };
 
   const handlePageChange = (page) => setCurrentPage(page);
@@ -38,7 +45,7 @@ function App() {
     <div className="App">
       <div>
       {/*Calling Header div */}
-      <Header handlePageChange={handlePageChange}/>
+      <Header currentPage={currentPage} handlePageChange={handlePageChange}/>
       <div className='page'>{renderPage()}</div>
       <Footer/>
       </div>

@@ -30,13 +30,27 @@ const projects = [
         src: '../rain.gif',
         srcAlt: 'forecast/weather data via API requests',
     },
-    
+    {
+        name:'Movie Finder',
+        github: 'https://github.com/taada33/Movie-Selector',
+        deploy: 'https://taada33.github.io/Movie-Selector/',
+        src: '../popcorn.gif',
+        srcAlt: 'Find movie trailers and reviews',
+    },
+    {
+        name:'Social Network API',
+        github: 'https://github.com/taada33/Social-Network-API',
+        src: '../database.gif',
+        srcAlt: '',
+    },
 ]
 
 export default function Portfolio() {
     return (
         projects.map((project, index) => {
-            return <Project project={project} key={index}/>
+            return (
+                <Project project={project} key={index}/>
+            ) 
         })
     )
 }

@@ -11,9 +11,9 @@ export default function Contact() {
         const { target } = e;
         const inputType = target.name;
         const inputValue = target.value;
-        if (inputType === 'email') {
+        if (inputType === 'Email') {
             setEmail(inputValue);
-          } else if (inputType === 'name') {
+          } else if (inputType === 'Name') {
             setName(inputValue);
           } else {
             setText(inputValue);

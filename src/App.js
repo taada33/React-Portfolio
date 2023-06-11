@@ -43,12 +43,10 @@ function App() {
   const handlePageChange = (page) => setCurrentPage(page);
   return (
     <div className="App">
-      <div>
       {/*Calling Header div */}
       <Header currentPage={currentPage} handlePageChange={handlePageChange}/>
       <div className='page'>{renderPage()}</div>
       <Footer/>
-      </div>
     </div>
   );
 }

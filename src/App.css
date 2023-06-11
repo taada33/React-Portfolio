@@ -2,7 +2,6 @@
   text-align: center;
   display: block;
   overflow: auto;
-  height:100%;
 }
 
 h1, h2, h3, p{
@@ -11,6 +10,14 @@ h1, h2, h3, p{
 
 h1{
   display: block;
+  font-family: 'M PLUS 1 Code', sans-serif;
+  position: fixed;
+  left: 10px;
+  top: 2.5%;
+}
+
+h2{
+  margin-top: 10px;
 }
 
 
@@ -21,8 +28,7 @@ header,footer {
   margin-bottom: 0;
   /* font-size: 3vw; */
   height: 10vh;
-
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -47,9 +53,25 @@ footer{
   justify-content: center;
   align-items: center;
 }
+
+.linkedIn{
+  width: 30px;
+  height: 30px;
+}
+
+.github{
+  width: 60px;
+  height: 30px;
+}
+
+.stackOverflow{
+  width: 140px;
+  height: 30px;
+}
+
 .page{
+  height: 80vh;
   margin: 0;
-  height: 60vh;
   display: block;
   overflow: auto;
   background: linear-gradient(
@@ -57,7 +79,7 @@ footer{
     #7D83FF 50%,
     #007FFF 50%
   );
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
 }
 
 .profileImg{
@@ -72,15 +94,40 @@ footer{
   flex-wrap: wrap;
 }
 
+
 .img-container {
   color: white;
   text-shadow: 1px 1px black;
   position: relative;
+  text-align: center;
   display: inline-block;
   margin: 20px;
   width: 20vw;
   height: 20vh;
+  background-color: white;
 }
+
+@keyframes text-opacity {
+  from {opacity: 0%;}
+  to {opacity: 100%}
+}
+
+.img-mouseOver{
+  animation-name: text-opacity;
+  animation-duration: 2s;
+}
+
+
+@keyframes img-opacity {
+  from {opacity: 100%;}
+  to {opacity: 40%}
+}
+
+.img-container:hover .project-img{
+  opacity:50%;
+}
+
+
 
 img {
   width: 100%;
@@ -89,21 +136,32 @@ img {
 
 .img-container .title{
   position: absolute;
-  top: 10%;
-  left: 24%;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   pointer-events: none;
 }
 
 .img-container .link{
   position: absolute;
-  top:30%;
-  left: 24%;
+  bottom: 8px;
+  right: 16px;
+}
+
+.github-text{
+  height: 15px;
+  width: 55px;
+}
+
+.deployment{
+  height: 20px;
+  width: 20px;
 }
 
 .img-container .project-github{
   position: absolute;
-  top: 80%;
-  left: 24%;
+  bottom: 8px;
+  left: 16px;
 }
 
 form{
